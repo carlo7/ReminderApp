@@ -3,14 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/drawable/ic_check_circle.xml" value="0.2345" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.14" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/activity_notification_message.xml" value="0.1" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/activity_reminder.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/activity_timer.xml" value="0.18041898247114152" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/notification_layout.xml" value="0.16" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/single_reminder.xml" value="0.16" />
+        <entry key="..\:/Users/user/ASProjects/ReminderApp/app/src/main/res/layout/toolbar.xml" value="0.18041898247114152" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_add.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_notifications.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.18859649122807018" />
         <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_notification_message.xml" value="0.22395833333333334" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_reminder.xml" value="0.1" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_timer.xml" value="0.21979166666666666" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/notification_layout.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/single_reminder.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_reminder.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_timer.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/notification_layout.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/single_reminder.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/context_menu.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/filename.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/inflater_menu.xml" value="0.2205128205128205" />
       </map>
     </option>
   </component>

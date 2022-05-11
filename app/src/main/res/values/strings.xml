@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">ReminderApp</string>
+    <string name="add_reminders">Add reminders to the main activity</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="notify_img">notification ic</string>
+    <string name="task_saved">Task Saved</string>
+    <string name="task_time">Task Time</string>
+    <string name="snooze_off">SNOOZE OFF</string>
+    <string name="img_timer">An image to fill the background of Timer</string>
+    <string name="reminder_app">ReminderApp</string>
+    <string name="enter_the_task">Enter The Task</string>
+    <string name="submit">Submit</string>
+    <string name="add_task_here">Add Your Task Reminder Here...</string>
+    <string name="hello">Hello</string>
 
 </resources>

@@ -12,7 +12,7 @@ public class Timer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
-        int secondsDelayed = 1;
+        int secondsDelayed = 2;
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 //after 500 milliseconds this block calls the mainActivity

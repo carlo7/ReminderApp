@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lightblue"/>
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#022E51"/>
+
+    </LinearLayout>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:contentDescription="@string/add_reminders"
         android:id="@+id/addReminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,8 +34,12 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         app:srcCompat="@drawable/ic_add"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        android:focusable="true"
+         />
 
 
 </RelativeLayout>

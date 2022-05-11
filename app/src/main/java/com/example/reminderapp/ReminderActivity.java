@@ -60,9 +60,9 @@ public class ReminderActivity extends AppCompatActivity {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String title = edtTitle.getText().toString().trim();//access the data form the input field
-                String date = btDate.getText().toString().trim();//access the date form the choose date button
-                String time = btTime.getText().toString().trim();//access the time form the choose time button
+                String title = edtTitle.getText().toString().trim();//access the title from the input field
+                String date = btDate.getText().toString().trim();//access the date from the choose date button
+                String time = btTime.getText().toString().trim();//access the time from the choose time button
 
                 if (title.isEmpty()) {
                     Toast.makeText(ReminderActivity.this, "Please Enter text", Toast.LENGTH_SHORT).show();
@@ -146,7 +146,7 @@ public class ReminderActivity extends AppCompatActivity {
 
 
     private void setAlarm(String text, String date, String time) {
-        AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);                   //assigining alaram manager object to set alaram
+        AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);                   //assigning alarm manager object to set alarm
 
         Intent intent = new Intent(getApplicationContext(), AlarmActivity.class);
         intent.putExtra("event", text);                                                       //sending data to alarm class to create channel and notification
@@ -165,9 +165,9 @@ public class ReminderActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        Intent intentBack = new Intent(getApplicationContext(), MainActivity.class);                //this intent will be called once the setting alaram is completes
+        Intent intentBack = new Intent(getApplicationContext(), MainActivity.class);                //this intent will be called once the setting alarm is completes
         intentBack.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intentBack);                                                                  //navigates from adding reminder activity ot mainactivity
+        startActivity(intentBack);                                                                  //navigates from adding reminder activity ot mainActivity
 
     }
 }

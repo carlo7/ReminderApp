@@ -3,7 +3,7 @@
     <style name="Theme.ReminderApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
 
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/lightBlue</item>
         <!-- Secondary brand color. -->
 
         <item name="colorOnSecondary">@color/black</item>

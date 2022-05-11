@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cabToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="#022E51"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cabItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Reminders"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

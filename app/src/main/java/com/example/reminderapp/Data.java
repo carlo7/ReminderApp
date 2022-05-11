@@ -1,15 +1,23 @@
 package com.example.reminderapp;
 
 public class Data {
+    private static Data value;
     String title, date, time;
 
-    public Data() {
-    }
 
+     //Data constructors
     public Data(String title, String date, String time) {
         this.title = title;
         this.date = date;
         this.time = time;
+    }
+   //Data variable getters and setters
+    public static Data valueOf(int size) {
+        return value;
+    }
+
+    public static void setValue(Data value) {
+        Data.value = value;
     }
 
     public String getTitle() {

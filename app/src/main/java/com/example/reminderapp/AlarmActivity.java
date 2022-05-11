@@ -37,7 +37,7 @@ public class AlarmActivity extends BroadcastReceiver {
         RemoteViews contentView = new RemoteViews(context.getPackageName(), R.layout.notification_layout);
         contentView.setImageViewResource(R.id.image, R.mipmap.ic_launcher);
         PendingIntent pendingSwitchIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
-        contentView.setOnClickPendingIntent(R.id.snozzButton, pendingSwitchIntent);
+        contentView.setOnClickPendingIntent(R.id.snoozeButton, pendingSwitchIntent);
         contentView.setTextViewText(R.id.message, text);
         contentView.setTextViewText(R.id.date, date);
         mBuilder.setSmallIcon(R.drawable.ic_alarm);

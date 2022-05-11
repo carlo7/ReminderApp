@@ -12,37 +12,39 @@
         android:padding="10dp">
 
         <Button
-            android:id="@+id/snozzButton"
+            android:id="@+id/snoozeButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="Snozz off"
+            android:text="@string/snooze_off"
             app:backgroundTint="#2196F3"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView
+            android:contentDescription="@string/notify_img"
             android:id="@+id/icon"
             android:layout_width="60dp"
             android:layout_height="45dp"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="-10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="-10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/ic_notifications" />
+            android:src="@drawable/ic_notifications"
+             />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/icon">
+            android:layout_toEndOf="@+id/icon">
 
             <TextView
                 android:id="@+id/message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Task Saved"
+                android:layout_alignParentStart="true"
+                android:text="@string/task_saved"
                 android:textColor="#000000"
                 android:textSize="13sp" />
 
@@ -51,9 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/message"
-                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="3dp"
-                android:text="Task Time"
+                android:text="@string/task_time"
                 android:textColor="#000000"
                 android:textSize="13sp" />
         </RelativeLayout>
