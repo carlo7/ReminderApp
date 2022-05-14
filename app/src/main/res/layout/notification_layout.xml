@@ -18,7 +18,8 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:text="@string/snooze_off"
-            app:backgroundTint="#2196F3"
+            android:textColor="@color/white"
+            app:backgroundTint="#134C7A"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView

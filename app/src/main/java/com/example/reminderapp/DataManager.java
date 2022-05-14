@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DataManager extends SQLiteOpenHelper {
-    private static final String dbname = "reminder";//Table  name to store reminders in sqllite
+    private static final String dbname = "reminder";//Table  name to store reminders in sqlite
 
     public DataManager(@Nullable Context context) {
         super(context, dbname, null, 1);
@@ -17,7 +17,7 @@ public class DataManager extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        //sql query to insert data in sqllite
+        //sql query to insert data in sqlite
         String query = "create table tbl_reminder(id integer primary key autoincrement,title text,date text,time text)";
         sqLiteDatabase.execSQL(query);
     }
@@ -34,7 +34,7 @@ public class DataManager extends SQLiteOpenHelper {
     public String addReminder(String title, String date, String time) {
         SQLiteDatabase database = this.getReadableDatabase();
 
-        //Inserts  data into sqllite database
+        //Inserts  data into sqlite database
         ContentValues contentValues = new ContentValues();
         contentValues.put("title", title);
         contentValues.put("date", date);
@@ -52,7 +52,7 @@ public class DataManager extends SQLiteOpenHelper {
 
     }
 
-    public Cursor readallreminders() {
+    public Cursor readAllReminders() {
         SQLiteDatabase database = this.getWritableDatabase();
 
         //Sql query to  retrieve  data from the database

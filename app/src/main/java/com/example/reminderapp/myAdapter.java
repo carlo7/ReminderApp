@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
     MainActivity activity;
     ArrayList<Data> dataHolder; //array list to hold the reminders
-    CardView cardView;
     boolean isEnable=false;
     boolean isSelectAll=false;
     ArrayList<Data> selectList= new ArrayList<>();
@@ -54,14 +53,14 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
     //Binds the single reminder objects to recycler view
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
+
+
         holder.mTitle.setText(dataHolder.get(position).getTitle());
         holder.mDate.setText(dataHolder.get(position).getDate());
         holder.mTime.setText(dataHolder.get(position).getTime());
 
 
-
-
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 if(!isEnable)//CAB not enabled
@@ -82,7 +81,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
                             isEnable= true; //Instantiate isEnable to true
 
-                            ClickItem(holder); //call ClickItem method
+                            ClickCard(holder); //call ClickCard method
 
                             mainViewModel.getText().observe((LifecycleOwner) activity,
                                     new Observer<Data>() {
@@ -117,7 +116,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
                                         selectList.clear();
                                         selectList.addAll(dataHolder);
                                     }
-                                    mainViewModel.setText(Data.valueOf(selectList.size()));
+
                                     notifyDataSetChanged();
 ;                                   break;
                             }
@@ -129,13 +128,13 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
                             isEnable = false;
                             selectList.clear();
                             notifyDataSetChanged();
-;
+
                         }
                     };
                     ((AppCompatActivity)v.getContext()).startActionMode(callback);
                 }
                 else {
-                    ClickItem(holder);
+                    ClickCard(holder);
                 }
                 return true;
             }
@@ -147,7 +146,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
             if(isEnable) {
 
-            ClickItem(holder);
+            ClickCard(holder);
 
              }
             else{
@@ -162,11 +161,11 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
    if (isSelectAll){
        holder.checkBox.setVisibility(View.VISIBLE);
        holder.checkBox.setChecked(true);
-       holder.itemView.setBackgroundColor(Color.LTGRAY);
+
    }
    else{
-       holder.checkBox.setVisibility(View.GONE);
-       holder.itemView.setBackgroundColor(Color.TRANSPARENT);
+       holder.checkBox.setVisibility(View.VISIBLE);
+       holder.checkBox.setChecked(false);
    }
 
     }
@@ -177,7 +176,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
     }
 
-    private void ClickItem(myViewHolder holder) {
+    private void ClickCard(myViewHolder holder) {
 
         //Returns the Adapter position of the item represented by the ViewHolder and stores it in variable data
         Data data= dataHolder.get(holder.getAdapterPosition());
@@ -186,7 +185,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
             holder.checkBox.setVisibility(View.VISIBLE);
             holder.checkBox.setChecked(true);
-            holder.itemView.setBackgroundColor(Color.LTGRAY);
             selectList.add(data);
             /**count++;
             *updateCount();*/
@@ -195,7 +193,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
         }
         else{
             holder.checkBox.setVisibility(View.GONE);
-            holder.itemView.setBackgroundColor(Color.TRANSPARENT);
             selectList.remove(data);
            /** count--;
             updateCount();*/
@@ -218,7 +215,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            //holds the reference of the materials to show data in recyclerview
+            //holds the reference of the materials to show data in the cards
             mTitle = itemView.findViewById(R.id.txtTitle);
             mDate = itemView.findViewById(R.id.txtDate);
             mTime = itemView.findViewById(R.id.txtTime);

@@ -1,7 +1,6 @@
 package com.example.reminderapp;
 
 public class Data {
-    private static Data value;
     String title, date, time;
 
 
@@ -11,14 +10,7 @@ public class Data {
         this.date = date;
         this.time = time;
     }
-   //Data variable getters and setters
-    public static Data valueOf(int size) {
-        return value;
-    }
 
-    public static void setValue(Data value) {
-        Data.value = value;
-    }
 
     public String getTitle() {
         return title;
