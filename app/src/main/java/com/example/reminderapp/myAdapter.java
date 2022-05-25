@@ -63,9 +63,9 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
         holder.cardView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                if(!isEnable)//CAB not enabled
+                if(!isEnable)
                 {
-                    //Initialize CAB if it is enable
+
                     ActionMode.Callback callback= new ActionMode.Callback() {
                         @Override
                         public boolean onCreateActionMode(ActionMode mode, Menu menu) {
@@ -81,7 +81,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
                             isEnable= true; //Instantiate isEnable to true
 
-                            ClickCard(holder); //call ClickCard method
+                            clickView(holder); //call clickView// method
 
                             mainViewModel.getText().observe((LifecycleOwner) activity,
                                     new Observer<Data>() {
@@ -134,7 +134,8 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
                     ((AppCompatActivity)v.getContext()).startActionMode(callback);
                 }
                 else {
-                    ClickCard(holder);
+                    holder.checkBox.setVisibility(View.VISIBLE);
+
                 }
                 return true;
             }
@@ -144,16 +145,8 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
            @Override
             public void onClick(View v) {
 
-            if(isEnable) {
-
-            ClickCard(holder);
-
-             }
-            else{
 
                 expandActivity();
-
-                }
 
             }
 });
@@ -173,10 +166,11 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
 
 
     private void expandActivity() {
+        //TODO ; Add a dialog box view on item click
 
     }
 
-    private void ClickCard(myViewHolder holder) {
+    private void clickView(myViewHolder holder) {
 
         //Returns the Adapter position of the item represented by the ViewHolder and stores it in variable data
         Data data= dataHolder.get(holder.getAdapterPosition());
@@ -220,7 +214,7 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
             mDate = itemView.findViewById(R.id.txtDate);
             mTime = itemView.findViewById(R.id.txtTime);
             checkBox = itemView.findViewById(R.id.check_box);
-            cardView= itemView.findViewById(R.id.cd_view);
+            cardView= (CardView) itemView;
         }
     }
     /**public void updateCount(){

@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             dataHolder.add(data);
         }
 
-        adapter = new myAdapter(this, dataHolder);//initialize adapter
+        adapter = new myAdapter(this, dataHolder );//initialize adapter
         mRecyclerview.setAdapter(adapter);               //set adapter
 
     }
